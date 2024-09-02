@@ -6,10 +6,10 @@ import multer from "multer";
 import express from "express";
 import { v4 as uuidv4 } from "uuid";
 import dotenv from "dotenv";
-
+import cors from "cors";
 dotenv.config(); // Load environment variables
-
 const app = express();
+app.use(cors());
 const port = 3000;
 
 // Check for required environment variables
